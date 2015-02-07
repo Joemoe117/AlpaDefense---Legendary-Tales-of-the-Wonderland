@@ -153,7 +153,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408490, guid: 661ed0eac1c88d646b0f18b171131daf, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 661ed0eac1c88d646b0f18b171131daf, type: 2}
@@ -1942,8 +1942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionSound: {fileID: 8300000, guid: 9e88e7ae5a9b7d841a4c6e2f7207656b, type: 3}
-  playerShotSound: {fileID: 8300000, guid: 6898671c68602df4a8ec48cbc98c9f46, type: 3}
-  enemyShotSound: {fileID: 8300000, guid: 545f4301c5b255e4e9c3942b8557722e, type: 3}
+  playerShotSound: {fileID: 8300000, guid: c448427e06478b946af8aaf9c3b02d46, type: 3}
+  enemyShotSound: {fileID: 8300000, guid: c448427e06478b946af8aaf9c3b02d46, type: 3}
 --- !u!114 &1210581442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,7 +2076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495386, guid: af9f0d13b0d332f44919c261f33b2725, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af9f0d13b0d332f44919c261f33b2725, type: 2}
