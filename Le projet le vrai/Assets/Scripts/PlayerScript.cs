@@ -80,7 +80,6 @@ public class PlayerScript : MonoBehaviour
 			Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
 			transform.position.z
 			);
-		
 	}
 
 	public void start_clignote(){
