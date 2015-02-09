@@ -25,7 +25,15 @@ public class HealthScript : MonoBehaviour
 			if (shot.isEnemyShot != isEnemy)
 			{
 				hp -= shot.damage;
-				
+
+				if (isEnemy){
+					EnemyScript enemy = gameObject.GetComponent<EnemyScript>();
+				}
+				else {
+					PlayerScript joueur = gameObject.GetComponent<PlayerScript>();
+					joueur.start_clignote();
+				}
+
 				// Destruction du projectile
 				// On détruit toujours le gameObject associé
 				// sinon c'est le script qui serait détruit avec ""this""
@@ -35,6 +43,14 @@ public class HealthScript : MonoBehaviour
 				{
 					SpecialEffectsHelper.Instance.Explosion(transform.position);
 					SoundEffectsHelper.Instance.MakeExplosionSound();
+					if (isEnemy) 
+					{
+						EnemyScript myself = gameObject.GetComponent<EnemyScript>();
+						if (myself != null)
+						{
+							GameObject.Find("Scripts").GetComponent<ScoringScript>().upScore(myself.nbPoint);
+						}
+					}
 					// Destruction !
 					Destroy(gameObject);
 				}
