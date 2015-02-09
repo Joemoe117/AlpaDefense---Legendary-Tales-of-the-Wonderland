@@ -719,6 +719,7 @@ GameObject:
   - 114: {fileID: 629857050}
   - 114: {fileID: 629857051}
   - 114: {fileID: 629857052}
+  - 114: {fileID: 629857054}
   - 114: {fileID: 629857053}
   m_Layer: 0
   m_Name: Player
@@ -843,6 +844,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 1, y: 1}
+  direction: {x: 1, y: 0}
+  isLinkedToCamera: 1
+  isLooping: 0
+--- !u!114 &629857054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11446412, guid: 8d1b4e07f5ac9c8488a311b1fce4f533,
+    type: 2}
+  m_PrefabInternal: {fileID: 268352627}
+  m_GameObject: {fileID: 629857045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b002dbf9ad1d404da3034f1c6225f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 2, y: 2}
   direction: {x: 1, y: 0}
   isLinkedToCamera: 1
   isLooping: 0
