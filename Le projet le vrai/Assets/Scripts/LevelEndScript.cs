@@ -28,6 +28,8 @@ public class LevelEndScript : MonoBehaviour {
 			)
 		{
 			// Recharge le niveau
+			VariablesGlobales.nbPoint = GameObject.Find("Scripts").GetComponent<ScoringScript>().getScore();
+			PlayerPrefs.Save();
 			Application.LoadLevel(nextLevel);
 		}
 		

@@ -6,12 +6,14 @@ public class ScoringScript : MonoBehaviour {
 
 	// Use this for initialization
 	public static ScoringScript Instance;
-	private int score = 0;
+	private int score;
 	public GameObject playerScore;
 
 	void Start () {
+		score = VariablesGlobales.nbPoint;
 		playerScore = GameObject.FindGameObjectsWithTag ("Point") [0];
 		playerScore.GetComponent<Text> ().text = "Point : " + score.ToString();
+
 	}
 	
 	// Update is called once per frame

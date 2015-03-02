@@ -22,6 +22,7 @@ public class PlayerScript : MonoBehaviour
 	void Start()
 	{
 		playerVie = GameObject.FindGameObjectsWithTag ("Vie") [0];
+		GameObject.Find ("Scripts").GetComponent<ScoringScript> ().setScore (VariablesGlobales.nbPoint);
 	}
 
 	void Update()
