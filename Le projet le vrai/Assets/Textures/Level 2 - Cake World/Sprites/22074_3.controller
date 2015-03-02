@@ -5,13 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GateauMan
+  m_Name: 22074_3
   serializedVersion: 2
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110758164}
+    m_StateMachine: {fileID: 110731604}
     m_Mask: {fileID: 0}
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
@@ -20,31 +20,31 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &110258164
+--- !u!1102 &110231604
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GateauMan
+  m_Name: boss_level2
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 4d5815a5d7ced874c933b28571117966, type: 2}
-  m_ParentStateMachine: {fileID: 110758164}
-  m_Position: {x: 48, y: 48, z: 0}
+  - {fileID: 7400000, guid: 6d56c19fedbcb8949bde24bd6d4a0b78, type: 2}
+  m_ParentStateMachine: {fileID: 110731604}
+  m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1107 &110758164
+--- !u!1107 &110731604
 StateMachine:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110258164}
+  m_DefaultState: {fileID: 110231604}
   m_States:
-  - {fileID: 110258164}
+  - {fileID: 110231604}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}
