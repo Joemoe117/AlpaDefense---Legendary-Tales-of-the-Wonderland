@@ -10,6 +10,9 @@ public class LevelEndScript : MonoBehaviour {
 		string nextLevel = "Stage01";
 		if (Application.loadedLevelName == "Stage01")
 			nextLevel = "Stage02";
+
+		if (Application.loadedLevelName == "Stage02")
+			nextLevel = "Stage03";
 		
 		if (
 			GUI.Button(

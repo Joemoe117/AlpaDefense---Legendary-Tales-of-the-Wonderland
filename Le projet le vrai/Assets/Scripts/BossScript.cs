@@ -5,19 +5,23 @@ public class BossScript : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject player;
+	public GameObject musicFin;
 	void Start () {
 		player = GameObject.FindGameObjectsWithTag ("Player")[0];
-
-
-
+		musicFin = GameObject.FindGameObjectsWithTag ("Finish")[0];
+		musicFin.gameObject.audio.Pause();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//player.GetComponent<PlayerScript> ().stopPlayer ();
 
-		if (player.transform.position.x + 25 >= gameObject.transform.position.x)
+		if (player.transform.position.x + 23	 >= gameObject.transform.position.x) {
 			player.GetComponent<PlayerScript> ().stopPlayer ();
+			if (!musicFin.gameObject.audio.isPlaying)
+				musicFin.gameObject.audio.Play();
+			musicFin.gameObject.audio.mute = false;
+		}
 	}
 
 	void OnDestroy() {

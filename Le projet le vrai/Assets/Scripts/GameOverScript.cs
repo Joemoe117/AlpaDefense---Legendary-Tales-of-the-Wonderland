@@ -24,7 +24,7 @@ public class GameOverScript : MonoBehaviour
 			)
 		{
 			// Recharge le niveau
-			Application.LoadLevel("Stage01");
+			Application.LoadLevel(Application.loadedLevelName);
 		}
 		
 		if (
