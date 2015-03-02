@@ -60,7 +60,7 @@ public class EnemyScript : MonoBehaviour
 			// 4 - L'ennemi n'a pas été détruit, il faut faire le ménage
 			if (renderer.IsVisibleFrom(Camera.main) == false)
 			{
-				//Destroy(gameObject);
+				Destroy(gameObject);
 			}
 		}
 	}

@@ -80,7 +80,7 @@ public class ScrollingScript : MonoBehaviour
 		// 4 - Répétition
 		if (isLooping)
 		{
-			// On prend le premier objet (la liste est ordonnée)
+			// On prend le premier objet (la la liste est ordonnée)
 			Transform firstChild = backgroundPart.FirstOrDefault();
 			
 			if (firstChild != null)
