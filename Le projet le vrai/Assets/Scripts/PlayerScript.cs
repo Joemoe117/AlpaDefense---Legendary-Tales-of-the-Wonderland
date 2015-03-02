@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Contrôleur du joueur
@@ -12,12 +13,22 @@ public class PlayerScript : MonoBehaviour
 	
 	private float tpsClignote = 0.10f;
 	private bool clignote = false;
+	private int vie = 0;
+	public GameObject playerVie;
 	
 	// 2 - Stockage du mouvement
 	private Vector2 movement;
 
+	void Start()
+	{
+		playerVie = GameObject.FindGameObjectsWithTag ("Vie") [0];
+	}
+
 	void Update()
 	{
+		vie = gameObject.GetComponent<HealthScript> ().hp;
+		playerVie.GetComponent<Text> ().text = "Vie * " + vie.ToString();
+
 		if (clignote) {
 			if (tpsClignote > 0) {
 				gameObject.renderer.material.color = new Color32(180, 180, 180, 150);
