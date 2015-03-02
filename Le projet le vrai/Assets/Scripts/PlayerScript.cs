@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour
 	
 	// 2 - Stockage du mouvement
 	private Vector2 movement;
-	
+
 	void Update()
 	{
 		if (clignote) {
@@ -91,6 +91,10 @@ public class PlayerScript : MonoBehaviour
 	{
 		// 5 - Déplacement
 		rigidbody2D.velocity = movement;
+	}
+
+	public void stopPlayer(){
+		gameObject.GetComponent<ScrollingScript> ().speed = new Vector2 (0, 0);
 	}
 
 	void OnDestroy()

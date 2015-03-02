@@ -27,7 +27,7 @@ public class HealthScript : MonoBehaviour
 				hp -= shot.damage;
 
 				if (isEnemy){
-					EnemyScript enemy = gameObject.GetComponent<EnemyScript>();
+					//EnemyScript enemy = gameObject.GetComponent<EnemyScript>();
 				}
 				else {
 					PlayerScript joueur = gameObject.GetComponent<PlayerScript>();
