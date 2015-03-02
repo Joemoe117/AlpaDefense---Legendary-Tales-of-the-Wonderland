@@ -8,6 +8,7 @@ public class EnemyScript : MonoBehaviour
 	private bool hasSpawn;
 	private MoveScript moveScript;
 	private WeaponScript[] weapons;
+	public int nbPoint = 100;
 	
 	void Awake()
 	{
@@ -34,7 +35,8 @@ public class EnemyScript : MonoBehaviour
 			weapon.enabled = false;
 		}
 	}
-	
+
+
 	void Update()
 	{
 		// 2 - On vérifie si l'ennemi est apparu à l'écran

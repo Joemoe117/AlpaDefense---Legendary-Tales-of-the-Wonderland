@@ -10,11 +10,27 @@ public class PlayerScript : MonoBehaviour
 	/// </summary>
 	public Vector2 speed = new Vector2(50, 50);
 	
+	private float tpsClignote = 0.10f;
+	private bool clignote = false;
+	
 	// 2 - Stockage du mouvement
 	private Vector2 movement;
-	
+
 	void Update()
 	{
+		if (clignote) {
+			if (tpsClignote > 0) {
+				gameObject.renderer.material.color = new Color32(180, 180, 180, 150);
+				collider2D.enabled = false;
+				tpsClignote -= Time.deltaTime;
+			}
+			else {
+				gameObject.renderer.material.color = Color.white;
+				collider2D.enabled = true;
+			}
+		}
+
+
 		// 3 - Récupérer les informations du clavier/manette
 		float inputX = Input.GetAxis("Horizontal");
 		float inputY = Input.GetAxis("Vertical");
@@ -64,13 +80,21 @@ public class PlayerScript : MonoBehaviour
 			Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
 			transform.position.z
 			);
-		
+	}
+
+	public void start_clignote(){
+		clignote = true;
+		tpsClignote = 0.25f;
 	}
 	
 	void FixedUpdate()
 	{
 		// 5 - Déplacement
 		rigidbody2D.velocity = movement;
+	}
+
+	public void stopPlayer(){
+		gameObject.GetComponent<ScrollingScript> ().speed = new Vector2 (0, 0);
 	}
 
 	void OnDestroy()
