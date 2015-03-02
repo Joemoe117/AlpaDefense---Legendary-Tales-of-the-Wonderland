@@ -12,7 +12,7 @@ public class ScoringScript : MonoBehaviour {
 	void Start () {
 		score = VariablesGlobales.nbPoint;
 		playerScore = GameObject.FindGameObjectsWithTag ("Point") [0];
-		playerScore.GetComponent<Text> ().text = "Point : " + score.ToString();
+		playerScore.GetComponent<Text> ().text = "P o i n t   : " + score.ToString();
 
 	}
 	
@@ -31,6 +31,6 @@ public class ScoringScript : MonoBehaviour {
 
 	public void upScore(int gain){
 		score += gain;
-		playerScore.GetComponent<Text> ().text = "Point : " + score.ToString();
+		playerScore.GetComponent<Text> ().text = "P o i n t   : " + score.ToString();
 	}
 }

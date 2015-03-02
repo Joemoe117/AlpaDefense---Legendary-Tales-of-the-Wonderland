@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour
 	void Update()
 	{
 		vie = gameObject.GetComponent<HealthScript> ().hp;
-		playerVie.GetComponent<Text> ().text = "Vie * " + vie.ToString();
+		playerVie.GetComponent<Text> ().text = "V i e        X " + vie.ToString();
 
 		if (clignote) {
 			if (tpsClignote > 0) {
