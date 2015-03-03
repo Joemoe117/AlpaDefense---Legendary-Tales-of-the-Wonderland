@@ -9802,7 +9802,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11472548, guid: f92c082b04d318149896cfff17bb7d0f, type: 2}
       propertyPath: hp
-      value: 75
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f92c082b04d318149896cfff17bb7d0f, type: 2}
@@ -11357,7 +11357,7 @@ MonoBehaviour:
   speed: {x: 2.5, y: 2.5}
   direction: {x: -1, y: 0}
   isLinkedToCamera: 0
-  isLooping: 0
+  isLooping: 1
 --- !u!1 &1422339542
 GameObject:
   m_ObjectHideFlags: 0
@@ -17156,7 +17156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e4fed29c3391b40a3504cdbded2f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 75
+  hp: 70
   isEnemy: 1
 --- !u!114 &2108129895
 MonoBehaviour:
@@ -17356,7 +17356,7 @@ Transform:
   m_PrefabInternal: {fileID: 2085412102}
   m_GameObject: {fileID: 2118026263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.6199989, y: -.0199999996, z: 0}
+  m_LocalPosition: {x: 58.5999985, y: -.0199999996, z: 0}
   m_LocalScale: {x: 3.5, y: 3.97000003, z: 1}
   m_Children: []
   m_Father: {fileID: 1414926682}

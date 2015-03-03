@@ -13,7 +13,13 @@ public class LevelEndScript : MonoBehaviour {
 
 		if (Application.loadedLevelName == "Stage02")
 			nextLevel = "Stage03";
-		
+
+		if (Application.loadedLevelName == "Stage03")
+			nextLevel = "Fin";
+
+		if (nextLevel == "Fin")
+			Application.LoadLevel("Fin");
+
 		if (
 			GUI.Button(
 			// Centré en x, 1/3 en y
