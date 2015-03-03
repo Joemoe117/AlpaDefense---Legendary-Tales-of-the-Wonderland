@@ -83,4 +83,36 @@ public class EnemyScript : MonoBehaviour
 			weapon.enabled = true;
 		}
 	}
+
+	public void enPause()
+	{
+		hasSpawn = false;
+		
+		// On désactive tout
+		// -- collider
+		collider2D.enabled = false;
+		// -- Mouvement
+		moveScript.enabled = false;
+		// -- Tir
+		foreach (WeaponScript weapon in weapons)
+		{
+			weapon.enabled = false;
+		}			
+	}
+
+	public void onActiveTout()
+	{
+		hasSpawn = true;
+		
+		// On active tout
+		// -- Collider
+		collider2D.enabled = true;
+		// -- Mouvement
+		moveScript.enabled = true;
+		// -- Tir
+		foreach (WeaponScript weapon in weapons)
+		{
+			weapon.enabled = true;
+		}
+	}
 }

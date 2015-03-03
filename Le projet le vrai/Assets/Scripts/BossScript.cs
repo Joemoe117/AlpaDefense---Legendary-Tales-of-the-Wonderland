@@ -19,12 +19,16 @@ public class BossScript : MonoBehaviour {
 		//player.GetComponent<PlayerScript> ().stopPlayer ();
 
 		if (player.transform.position.x + 24 >= gameObject.transform.position.x) {
+			gameObject.GetComponent<EnemyScript> ().onActiveTout ();
 			player.GetComponent<PlayerScript> ().stopPlayer ();
 			if (musicFin.gameObject.audio.isPlaying)
-				musicDeb.gameObject.audio.Play();
+					musicDeb.gameObject.audio.Play ();
 			if (!musicFin.gameObject.audio.isPlaying)
-				musicFin.gameObject.audio.Play();
+					musicFin.gameObject.audio.Play ();
 			musicFin.gameObject.audio.mute = false;
+		}
+		else {
+			gameObject.GetComponent<EnemyScript> ().enPause();
 		}
 	}
 
